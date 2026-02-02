@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gomes Serviços Ágeis - Engenharia de Processos com Inteligência de Dados. Automação, dashboards e sistemas sob medida.">
+    <meta name="keywords" content="automação, planilhas, Apps Script, dashboards, gestão empresarial">
+    <meta name="author" content="Danilo Gomes">
+    
+    <!-- Open Graph para redes sociais -->
+    <meta property="og:title" content="Gomes Serviços Ágeis - Soluções em Automação">
+    <meta property="og:description" content="Engenharia de Processos com Inteligência de Dados">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gomesservicosageis.com.br">
+    
+    <title>Gomes Serviços Ágeis | Engenharia de Processos</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i data-lucide="zap"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">Gomes</span>
+                    <span class="logo-tagline">Serviços Ágeis</span>
+                </div>
+            </a>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#tecnologias" class="nav-link">Stack</a></li>
+                    <li><a href="#contato" class="nav-link btn-nav">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="grid-pattern"></div>
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i data-lucide="terminal"></i>
+                    <span>Desenvolvedor de Soluções</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Engenharia de Processos<br>
+                    com <span class="gradient-text">Inteligência de Dados</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Transformo processos manuais em sistemas automatizados. 
+                    Do caos das planilhas à clareza dos dashboards — 
+                    soluções sob medida que <strong>realmente funcionam</strong>.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="15">0</span>
+                        <span class="stat-label">Projetos Entregues</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-label">Horas Automatizadas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="100">0</span>
+                        <span class="stat-label">% Código Próprio</span>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="#projetos" class="btn btn-primary">
+                        <i data-lucide="folder-open"></i>
+                        Ver Projetos
+                    </a>
+                    <a href="#contato" class="btn btn-secondary">
+                        <i data-lucide="message-circle"></i>
+                        Falar no WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="window-title">automacao.gs</span>
+                    </div>
+                    <pre class="window-code"><code><span class="code-keyword">function</span> <span class="code-function">processarVendas</span>() {
+  <span class="code-keyword">const</span> dados = getVendasDoDia();
+  <span class="code-keyword">const</span> relatorio = dados
+    .<span class="code-method">filter</span>(v => v.status === <span class="code-string">'concluida'</span>)
+    .<span class="code-method">map</span>(v => calcularMetricas(v))
+    .<span class="code-method">reduce</span>(consolidarTotais);
+  
+  <span class="code-comment">// Atualiza dashboard em tempo real</span>
+  Dashboard.<span class="code-method">atualizar</span>(relatorio);
+  Notificacao.<span class="code-method">enviar</span>(<span class="code-string">'✅ Processado!'</span>);
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <a href="#sobre" class="scroll-indicator">
+            <span>Scroll</span>
+            <i data-lucide="chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- ========== SOBRE SECTION ========== -->
+    <section class="section sobre" id="sobre">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Sobre</span>
+                <h2 class="section-title">Quem está por trás do código</h2>
+            </div>
+            
+            <div class="sobre-grid">
+                <div class="sobre-content">
+                    <h3>Danilo Gomes</h3>
+                    <p class="sobre-role">Engenheiro de Processos & Desenvolvedor</p>
+                    
+                    <p>
+                        Sou o tipo de profissional que <strong>não aceita "sempre foi assim"</strong> 
+                        como resposta. Quando vejo uma empresa perdendo horas em processos manuais, 
+                        eu enxergo uma oportunidade de automação.
+                    </p>
+                    
+                    <p>
+                        Minha especialidade é traduzir a complexidade do seu negócio em 
+                        <strong>sistemas inteligentes e acessíveis</strong> — sem depender de 
+                        softwares caros ou consultorias intermináveis.
+                    </p>
+                    
+                    <div class="sobre-highlights">
+                        <div class="highlight">
+                            <i data-lucide="code-2"></i>
+                            <div>
+                                <strong>Código 100% Próprio</strong>
+                                <span>Sem templates, sem copiar e colar</span>
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <i data-lucide="message-square-code"></i>
+                            <div>
+                                <strong>Suporte Direto</strong>
+                                <span>Você fala comigo, não com atendente</span>
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <i data-lucide="rocket"></i>
+                            <div>
+                                <strong>Entrega Ágil</strong>
+                                <span>Projetos funcionais em semanas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sobre-image">
+    <div class="image-frame">
+        <img src="assets/img/danilo.png" alt="Danilo Gomes">
+    </div>
+    <div class="image-decoration"></div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVIÇOS SECTION ========== -->
+    <section class="section servicos" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Serviços</span>
+                <h2 class="section-title">O que eu posso construir para você</h2>
+                <p class="section-subtitle">
+                    Cada solução é desenvolvida do zero, sob medida para o seu negócio
+                </p>
+            </div>
+            
+            <div class="servicos-grid">
+    <!-- Card 1: Dashboards -->
+    <div class="servico-card">
+        <div class="servico-icon">
+            <i data-lucide="layout-dashboard"></i>
+        </div>
+        <h3>Dashboards Gerenciais</h3>
+        <p>
+            Painéis visuais que transformam dados brutos em insights acionáveis. 
+            Acompanhe vendas, metas e indicadores em tempo real.
+        </p>
+        <ul class="servico-features">
+            <li><i data-lucide="check"></i> Gráficos interativos</li>
+            <li><i data-lucide="check"></i> Atualização automática</li>
+            <li><i data-lucide="check"></i> Acesso via celular</li>
+        </ul>
+    </div>
+    
+    <!-- Card 2: Automação (Featured) -->
+    <div class="servico-card featured">
+        <div class="servico-badge">Mais Procurado</div>
+        <div class="servico-icon">
+            <i data-lucide="bot"></i>
+        </div>
+        <h3>Automação de Processos</h3>
+        <p>
+            Elimine tarefas repetitivas com scripts inteligentes. 
+            Relatórios, notificações e integrações que rodam sozinhos.
+        </p>
+        <ul class="servico-features">
+            <li><i data-lucide="check"></i> Integrações com APIs</li>
+            <li><i data-lucide="check"></i> Triggers automáticos</li>
+            <li><i data-lucide="check"></i> Notificações WhatsApp</li>
+        </ul>
+    </div>
+    
+    <!-- Card 3: Sistemas de Gestão -->
+    <div class="servico-card">
+        <div class="servico-icon">
+            <i data-lucide="database"></i>
+        </div>
+        <h3>Sistemas de Gestão</h3>
+        <p>
+            PDV, controle financeiro, gestão de estoque — sistemas completos 
+            que centralizam toda a operação do seu negócio.
+        </p>
+        <ul class="servico-features">
+            <li><i data-lucide="check"></i> Interface intuitiva</li>
+            <li><i data-lucide="check"></i> Controle de usuários</li>
+            <li><i data-lucide="check"></i> Backup automático</li>
+        </ul>
+    </div>
+    
+    <!-- Card 4: Planilhas Inteligentes -->
+    <div class="servico-card">
+        <div class="servico-icon">
+            <i data-lucide="file-spreadsheet"></i>
+        </div>
+        <h3>Planilhas Inteligentes</h3>
+        <p>
+            Muito além do básico: planilhas com validações, fórmulas avançadas, 
+            macros e conexão com bancos de dados externos.
+        </p>
+        <ul class="servico-features">
+            <li><i data-lucide="check"></i> VBA / Apps Script</li>
+            <li><i data-lucide="check"></i> Formulários web</li>
+            <li><i data-lucide="check"></i> Proteção de dados</li>
+        </ul>
+    </div>
+    
+    <!-- Card 5: Criação de Sites - NOVO -->
+    <div class="servico-card">
+        <div class="servico-icon">
+            <i data-lucide="globe"></i>
+        </div>
+        <h3>Sites Profissionais</h3>
+        <p>
+            Sites institucionais, portfólios e landing pages desenvolvidos 
+            em código puro. Design moderno, responsivo e otimizado para conversão.
+        </p>
+        <ul class="servico-features">
+            <li><i data-lucide="check"></i> Design personalizado</li>
+            <li><i data-lucide="check"></i> SEO otimizado</li>
+            <li><i data-lucide="check"></i> Carregamento rápido</li>
+        </ul>
+    </div>
+    
+    <!-- Card 6: Catálogos Virtuais - NOVO -->
+    <div class="servico-card">
+        <div class="servico-icon">
+            <i data-lucide="shopping-bag"></i>
+        </div>
+        <h3>Catálogos Virtuais</h3>
+        <p>
+            Catálogos online para seu negócio vender pelo WhatsApp. 
+            Produtos, preços e estoque atualizados automaticamente.
+        </p>
+        <ul class="servico-features">
+            <li><i data-lucide="check"></i> Integrado com WhatsApp</li>
+            <li><i data-lucide="check"></i> Gerenciamento fácil</li>
+            <li><i data-lucide="check"></i> Sem mensalidades</li>
+        </ul>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- ========== PROJETOS SECTION ========== -->
+    <section class="section projetos" id="projetos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfólio</span>
+                <h2 class="section-title">Projetos em Produção</h2>
+                <p class="section-subtitle">
+                    Sistemas reais, rodando em empresas reais. Clique para testar as demos.
+                </p>
+            </div>
+            
+            <div class="projetos-grid">
+                <!-- Projeto 1: GSA-Sistem (ERP/PDV) -->
+<article class="projeto-card">
+    <div class="projeto-image">
+        <img src="assets/img/projeto-pdv.png" alt="GSA-Sistem - Sistema PDV">
+        <div class="projeto-overlay">
+            <a href="https://gsa-system-web.vercel.app/dashboard" class="btn btn-small btn-primary" target="_blank">
+                <i data-lucide="external-link"></i>
+                Testar Grátis
+            </a>
+        </div>
+    </div>
+    <div class="projeto-content">
+        <div class="projeto-tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">TypeScript</span>
+        </div>
+        <h3>GSA-Sistem — ERP Completo</h3>
+        <p>
+            Sistema de gestão empresarial com PDV, controle de estoque inteligente 
+            via importação de XML (NF-e), dashboard gerencial e gestão de clientes. 
+            Interface moderna com tema dark e glassmorphism.
+        </p>
+        <div class="projeto-metrics">
+            <div class="metric">
+                <i data-lucide="zap"></i>
+                <span>Tempo real</span>
+            </div>
+            <div class="metric">
+                <i data-lucide="file-code"></i>
+                <span>Parser XML automático</span>
+            </div>
+        </div>
+        <a href="https://gsa-system-web.vercel.app/dashboard" class="projeto-link" target="_blank">
+            Começar teste grátis
+            <i data-lucide="arrow-right"></i>
+        </a>
+    </div>
+</article>
+                
+                <!-- Projeto 2: Gestão Financeira -->
+                <article class="projeto-card">
+                    <div class="projeto-image">
+                        <div class="image-placeholder projeto-placeholder">
+                            <i data-lucide="wallet"></i>
+                            <span>Screenshot Financeiro</span>
+                        </div>
+                        <div class="projeto-overlay">
+                            <a href="#" class="btn btn-small btn-primary" target="_blank">
+                                <i data-lucide="external-link"></i>
+                                Acessar Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="projeto-content">
+                        <div class="projeto-tags">
+                            <span class="tag">Apps Script</span>
+                            <span class="tag">API WhatsApp</span>
+                            <span class="tag">Dashboard</span>
+                        </div>
+                        <h3>Gestão Financeira Empresarial</h3>
+                        <p>
+                            Controle de contas a pagar/receber, fluxo de caixa, DRE automático 
+                            e alertas de vencimento via WhatsApp.
+                        </p>
+                        <div class="projeto-metrics">
+                            <div class="metric">
+                                <i data-lucide="trending-up"></i>
+                                <span>Visão 360° do caixa</span>
+                            </div>
+                            <div class="metric">
+                                <i data-lucide="bell"></i>
+                                <span>Alertas automáticos</span>
+                            </div>
+                        </div>
+                        <a href="#" class="projeto-link">
+                            Ver detalhes do projeto
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Projeto 3: Dashboard de Vendas -->
+                <article class="projeto-card">
+                    <div class="projeto-image">
+                        <div class="image-placeholder projeto-placeholder">
+                            <i data-lucide="bar-chart-3"></i>
+                            <span>Screenshot Dashboard</span>
+                        </div>
+                        <div class="projeto-overlay">
+                            <a href="#" class="btn btn-small btn-primary" target="_blank">
+                                <i data-lucide="external-link"></i>
+                                Acessar Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="projeto-content">
+                        <div class="projeto-tags">
+                            <span class="tag">Looker Studio</span>
+                            <span class="tag">BigQuery</span>
+                            <span class="tag">Apps Script</span>
+                        </div>
+                        <h3>Dashboard Executivo de Vendas</h3>
+                        <p>
+                            Painel gerencial com KPIs em tempo real, análise de performance 
+                            por vendedor, produto e período. Acesso mobile otimizado.
+                        </p>
+                        <div class="projeto-metrics">
+                            <div class="metric">
+                                <i data-lucide="eye"></i>
+                                <span>Dados em tempo real</span>
+                            </div>
+                            <div class="metric">
+                                <i data-lucide="smartphone"></i>
+                                <span>100% responsivo</span>
+                            </div>
+                        </div>
+                        <a href="#" class="projeto-link">
+                            Ver detalhes do projeto
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="projetos-cta">
+                <p>Tem um projeto em mente?</p>
+                <a href="#contato" class="btn btn-primary">
+                    <i data-lucide="message-circle"></i>
+                    Vamos conversar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TECNOLOGIAS SECTION ========== -->
+    <section class="section tecnologias" id="tecnologias">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Stack</span>
+                <h2 class="section-title">Tecnologias que domino</h2>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3><i data-lucide="code-2"></i> Linguagens</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <span class="tech-name">JavaScript</span>
+                            <div class="tech-bar"><div class="tech-progress" style="--progress: 95%"></div></div>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-name">Google Apps Script</span>
+                            <div class="tech-bar"><div class="tech-progress" style="--progress: 98%"></div></div>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-name">VBA (Excel)</span>
+                            <div class="tech-bar"><div class="tech-progress" style="--progress: 90%"></div></div>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-name">HTML / CSS</span>
+                            <div class="tech-bar"><div class="tech-progress" style="--progress: 92%"></div></div>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-name">SQL</span>
+                            <div class="tech-bar"><div class="tech-progress" style="--progress: 85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3><i data-lucide="wrench"></i> Ferramentas</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <span class="tech-name">Google Sheets</span>
+                            <div class="tech-bar"><div class="tech-progress" style="--progress: 98%"></div></div>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-name">Excel Avançado</span>
+                            <div class="tech-bar"><div class="tech-progress" style="--progress: 95%"></div></div>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-name">Looker Studio</span>
+                            <div class="tech-bar"><div class="tech-progress" style="--progress: 88%"></div></div>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-name">Supabase</span>
+                            <div class="tech-bar"><div class="tech-progress" style="--progress: 80%"></div></div>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-name">Git / GitHub</span>
+                            <div class="tech-bar"><div class="tech-progress" style="--progress: 82%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bloco de Código Real - Prova de Autoria -->
+            <div class="code-showcase">
+                <div class="showcase-header">
+                    <h3><i data-lucide="file-code"></i> Exemplo de Código Real</h3>
+                    <p>Trecho de função de tratamento de erros que uso nos meus projetos</p>
+                </div>
+                <div class="code-window large">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="window-title">errorHandler.gs</span>
+                    </div>
+                    <pre class="window-code"><code><span class="code-comment">/**
+ * Sistema de tratamento de erros com log e notificação
+ * @author Danilo Gomes - Gomes Serviços Ágeis
+ * @param {Function} fn - Função a ser executada com proteção
+ * @param {string} contexto - Nome do processo para identificação
+ */</span>
+<span class="code-keyword">function</span> <span class="code-function">executarComSeguranca</span>(fn, contexto) {
+  <span class="code-keyword">try</span> {
+    <span class="code-keyword">const</span> inicio = <span class="code-keyword">new</span> Date();
+    <span class="code-keyword">const</span> resultado = fn();
+    
+    <span class="code-comment">// Log de sucesso com tempo de execução</span>
+    <span class="code-keyword">const</span> duracao = ((<span class="code-keyword">new</span> Date() - inicio) / <span class="code-number">1000</span>).<span class="code-method">toFixed</span>(<span class="code-number">2</span>);
+    Logger.<span class="code-method">log</span>(<span class="code-string">`✅ [</span><span class="code-keyword">${</span>contexto<span class="code-keyword">}</span><span class="code-string">] Concluído em </span><span class="code-keyword">${</span>duracao<span class="code-keyword">}</span><span class="code-string">s`</span>);
+    
+    <span class="code-keyword">return</span> { sucesso: <span class="code-boolean">true</span>, dados: resultado };
+    
+  } <span class="code-keyword">catch</span> (erro) {
+    <span class="code-comment">// Registra erro em planilha de logs</span>
+    registrarErroNaPlanilha(contexto, erro);
+    
+    <span class="code-comment">// Notifica administrador via WhatsApp</span>
+    enviarAlertaWhatsApp({
+      tipo: <span class="code-string">'ERRO_SISTEMA'</span>,
+      processo: contexto,
+      mensagem: erro.<span class="code-property">message</span>,
+      stack: erro.<span class="code-property">stack</span>
+    });
+    
+    <span class="code-keyword">return</span> { sucesso: <span class="code-boolean">false</span>, erro: erro.<span class="code-property">message</span> };
+  }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTATO SECTION ========== -->
+    <section class="section contato" id="contato">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contato</span>
+                <h2 class="section-title">Vamos construir algo juntos?</h2>
+                <p class="section-subtitle">
+                    Respondo em até 24 horas. Sem formulários complicados — direto ao ponto.
+                </p>
+            </div>
+            
+            <div class="contato-grid">
+                <div class="contato-info">
+                    <div class="contato-item">
+                        <div class="contato-icon">
+                            <i data-lucide="message-circle"></i>
+                        </div>
+                        <div class="contato-details">
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/5511999999999" target="_blank">(11) 99999-9999</a>
+                            <span>Resposta mais rápida</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contato-item">
+                        <div class="contato-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div class="contato-details">
+                            <h4>E-mail</h4>
+                            <a href="mailto:contato@gomesservicosageis.com.br">contato@gomesservicosageis.com.br</a>
+                            <span>Para propostas detalhadas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contato-item">
+                        <div class="contato-icon">
+                            <i data-lucide="linkedin"></i>
+                        </div>
+                        <div class="contato-details">
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/seulinkedin" target="_blank">/in/danilogomes</a>
+                            <span>Perfil profissional</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contato-item">
+                        <div class="contato-icon">
+                            <i data-lucide="github"></i>
+                        </div>
+                        <div class="contato-details">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/seugithub" target="_blank">/danilo-gomes</a>
+                            <span>Código aberto</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contato-cta">
+                    <div class="cta-card">
+                        <div class="cta-icon">
+                            <i data-lucide="send"></i>
+                        </div>
+                        <h3>Pronto para começar?</h3>
+                        <p>
+                            Me conta seu desafio atual e eu retorno com uma proposta 
+                            de solução — sem compromisso.
+                        </p>
+                        <a href="https://wa.me/5511999999999?text=Olá! Vi seu portfólio e gostaria de conversar sobre um projeto." 
+                           class="btn btn-primary btn-large" target="_blank">
+                            <i data-lucide="message-circle"></i>
+                            Iniciar Conversa no WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-name">Gomes</span>
+                            <span class="logo-tagline">Serviços Ágeis</span>
+                        </div>
+                    </div>
+                    <p class="footer-tagline">
+                        Transformando processos em sistemas inteligentes.
+                    </p>
+                </div>
+                
+                <div class="footer-signature">
+                    <p>
+                        <i data-lucide="code-2"></i>
+                        Sistema desenvolvido integralmente em código puro (HTML/CSS/JS)<br>
+                        por <strong>Danilo Gomes</strong> — Gomes Serviços Ágeis
+                    </p>
+                    <a href="https://github.com/seugithub/portfolio" target="_blank" class="github-link">
+                        <i data-lucide="github"></i>
+                        Ver código-fonte no GitHub
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gomes Serviços Ágeis. Todos os direitos reservados.</p>
+                <p>CNPJ: XX.XXX.XXX/0001-XX</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

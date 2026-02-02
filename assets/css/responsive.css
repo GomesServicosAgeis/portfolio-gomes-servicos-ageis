@@ -1,0 +1,274 @@
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+/* ========== TABLET (max-width: 1024px) ========== */
+@media (max-width: 1024px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+    }
+    
+    .hero-cta {
+        justify-content: center;
+    }
+    
+    .hero-visual {
+        display: none;
+    }
+    
+    .sobre-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+    
+    .sobre-image {
+        order: -1;
+    }
+    
+    .image-frame {
+        width: 280px;
+        height: 350px;
+    }
+    
+    .image-decoration {
+        width: 280px;
+        height: 350px;
+        left: calc(50% - 120px);
+    }
+    
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .projetos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tech-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+    
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-signature {
+        text-align: center;
+    }
+    
+    .footer-signature p {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-sm);
+    }
+}
+
+/* ========== MOBILE (max-width: 768px) ========== */
+@media (max-width: 768px) {
+    :root {
+        --space-4xl: 4rem;
+    }
+    
+    /* Navigation */
+    .nav {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--bg-secondary);
+        border-bottom: 1px solid var(--border-subtle);
+        padding: var(--space-lg);
+        transform: translateY(-120%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-base);
+    }
+    
+    .nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+    
+    .nav-link {
+        display: block;
+        padding: var(--space-md);
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    .btn-nav {
+        width: 100%;
+    }
+    
+    /* ========================================
+       NAV TOGGLE - HAMBURGER MENU
+       Usa CSS custom properties para cálculo dinâmico
+       ======================================== */
+    .nav-toggle {
+        --bar-width: 24px;
+        --bar-height: 2px;
+        --bar-gap: 5px;
+        /* Cálculo automático do offset para animação */
+        --bar-offset: calc(var(--bar-gap) + var(--bar-height));
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--bar-gap);
+        padding: var(--space-sm);
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+    }
+    
+    .nav-toggle span {
+        display: block;
+        width: var(--bar-width);
+        height: var(--bar-height);
+        background: var(--text-primary);
+        border-radius: var(--bar-height);
+        transition: all var(--transition-base);
+        transform-origin: center;
+    }
+    
+    /* Estado ativo - transforma em X */
+    .nav-toggle.active span:nth-child(1) {
+        transform: translateY(var(--bar-offset)) rotate(45deg);
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+        transform: translateY(calc(var(--bar-offset) * -1)) rotate(-45deg);
+    }
+    
+    /* Hero */
+    .hero-stats {
+        flex-direction: column;
+        gap: var(--space-lg);
+        align-items: center;
+    }
+    
+    .stat {
+        text-align: center;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-cta .btn {
+        width: 100%;
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+    
+    /* Projetos */
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Sobre highlights */
+    .sobre-highlights {
+        gap: var(--space-md);
+    }
+    
+    .highlight {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* Code Window */
+    .window-code {
+        font-size: 0.75rem;
+        padding: var(--space-md);
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .btn-large {
+        padding: 0.875rem 1.75rem;
+    }
+}
+
+/* ========== SMALL MOBILE (max-width: 480px) ========== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--space-md);
+    }
+    
+    .hero {
+        padding: 100px 0 60px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .image-frame {
+        width: 240px;
+        height: 300px;
+    }
+    
+    .image-decoration {
+        width: 240px;
+        height: 300px;
+        left: calc(50% - 100px);
+    }
+    
+    .servico-card {
+        padding: var(--space-lg);
+    }
+    
+    .projeto-content {
+        padding: var(--space-md);
+    }
+    
+    .contato-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cta-card {
+        padding: var(--space-lg);
+    }
+}
