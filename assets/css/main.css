@@ -269,6 +269,31 @@ button {
     letter-spacing: 0.5px;
 }
 
+/* Estilização das Logos */
+.logo-img {
+    height: 42px; /* Altura ideal para o ícone no header */
+    width: auto;
+    transition: transform var(--transition-base);
+}
+
+.logo-img-full {
+    height: 65px; /* Altura um pouco maior para o footer */
+    width: auto;
+    transition: transform var(--transition-base);
+}
+
+.logo:hover .logo-img,
+.logo:hover .logo-img-full {
+    transform: scale(1.05);
+}
+
+/* Garante que o texto da logo no header fique alinhado com o ícone */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
 /* Navigation */
 .nav-list {
     display: flex;
